@@ -12,7 +12,16 @@ const Hero = () => {
           alt="Elegant jewelry display" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+      </div>
+      
+      {/* Overlay Image with Bracelets and Earrings */}
+      <div className="absolute inset-0 z-1 flex items-center justify-center pointer-events-none">
+        <img 
+          src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?q=80&auto=format&fit=crop"
+          alt="Bracelets and earrings collection" 
+          className="w-4/5 md:w-1/2 h-auto object-contain opacity-85 shadow-2xl"
+        />
       </div>
       
       {/* Content */}
