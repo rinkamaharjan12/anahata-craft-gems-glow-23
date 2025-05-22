@@ -16,15 +16,15 @@ const Hero = () => {
       
       {/* Content */}
       <div className="container relative z-10">
-        <div className="max-w-xl backdrop-blur-sm bg-white/30 p-8 rounded-lg shadow-lg">
-          <h1 className="text-5xl font-serif font-semibold mb-6 animate-fade-in text-black md:text-6xl drop-shadow-md">
+        <div className="max-w-2xl mx-auto backdrop-blur-sm bg-white/40 p-10 rounded-xl shadow-xl border border-white/20">
+          <h1 className="text-5xl font-serif font-semibold mb-8 animate-fade-in text-black md:text-6xl drop-shadow-md text-center">
             Handcrafted Jewelry For Your Soul
           </h1>
           <p 
             style={{
               animationDelay: "0.2s"
             }} 
-            className="text-xl mb-8 opacity-90 animate-fade-in text-black md:text-2xl font-medium drop-shadow-md"
+            className="text-xl mb-10 opacity-90 animate-fade-in text-black md:text-2xl font-medium drop-shadow-md text-center"
           >
             Discover our collection of unique, ethically-made bracelets and earrings designed to reflect your inner beauty.
           </p>
@@ -32,12 +32,12 @@ const Hero = () => {
             style={{
               animationDelay: "0.4s"
             }} 
-            className="flex flex-wrap gap-4 animate-fade-in"
+            className="flex flex-wrap gap-4 animate-fade-in justify-center"
           >
-            <Button size="lg" className="bg-anahata-terracotta hover:bg-anahata-brown text-white font-medium px-8">
+            <Button size="lg" className="bg-anahata-terracotta hover:bg-anahata-brown text-white font-medium px-8 py-6 text-lg">
               Shop Now
             </Button>
-            <Button size="lg" variant="outline" className="bg-white/80 border-anahata-terracotta text-anahata-brown hover:bg-white px-8">
+            <Button size="lg" variant="outline" className="bg-white/80 border-anahata-terracotta text-anahata-brown hover:bg-white px-8 py-6 text-lg">
               Our Story
             </Button>
           </div>
