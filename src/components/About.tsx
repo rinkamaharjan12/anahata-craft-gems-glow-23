@@ -17,14 +17,14 @@ const About = () => {
           </div>
           
           <div className="w-full md:w-1/3 text-center md:text-left">
-            <h3 className="text-2xl font-serif mb-4 text-yellow-600">Handcrafted with Love</h3>
-            <p className="mb-4 text-slate-50">
+            <h3 className="text-2xl font-serif mb-4 text-orange-900">Handcrafted with Love</h3>
+            <p className="mb-4 text-orange-800">
               Anahata Craft was born from a passion for creating beautiful, meaningful jewelry that connects with the soul. Each piece is handcrafted with intention and love, using ethically sourced materials.
             </p>
-            <p className="mb-4 text-slate-50">
+            <p className="mb-4 text-orange-800">
               Our founder, Maya, started creating jewelry as a form of meditation and self-expression. What began as a personal journey evolved into Anahata Craft, named after the heart chakra which represents love, balance, and compassion.
             </p>
-            <p className="text-slate-50">
+            <p className="text-orange-800">
               Today, our small team of artisans continues this tradition, creating unique pieces that help you express your individuality while honoring sustainable and ethical practices.
             </p>
             
