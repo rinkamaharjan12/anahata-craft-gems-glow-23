@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Heart } from "lucide-react";
+import { toast } from "@/components/ui/use-toast";
 
 interface ProductCardProps {
   name: string;
@@ -11,6 +12,16 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ name, price, image, isNew, isBestseller }: ProductCardProps) => {
+  // Handle product image click
+  const handleImageClick = () => {
+    console.log(`Product clicked: ${name}`);
+    toast({
+      title: "Product Selected",
+      description: `You selected ${name} - ${price}`,
+    });
+    // In a real app, this would navigate to the product detail page
+  };
+
   return (
     <div className="product-card group relative flex flex-col overflow-hidden">
       {/* Product Image */}
@@ -18,7 +29,8 @@ const ProductCard = ({ name, price, image, isNew, isBestseller }: ProductCardPro
         <img 
           src={image} 
           alt={name} 
-          className="product-image w-full h-[300px] object-cover"
+          className="product-image w-full h-[300px] object-cover cursor-pointer"
+          onClick={handleImageClick}
         />
         
         {/* Badge */}
@@ -35,7 +47,10 @@ const ProductCard = ({ name, price, image, isNew, isBestseller }: ProductCardPro
         
         {/* Quick actions */}
         <div className="absolute -bottom-10 left-0 right-0 bg-white bg-opacity-90 py-2 flex justify-center opacity-0 group-hover:bottom-0 group-hover:opacity-100 transition-all duration-300">
-          <button className="mx-2 text-anahata-brown hover:text-anahata-terracotta transition-colors">
+          <button 
+            className="mx-2 text-anahata-brown hover:text-anahata-terracotta transition-colors"
+            onClick={handleImageClick}
+          >
             Quick view
           </button>
           <div className="w-px bg-gray-300"></div>
@@ -51,7 +66,7 @@ const ProductCard = ({ name, price, image, isNew, isBestseller }: ProductCardPro
       </button>
       
       {/* Product Info */}
-      <h3 className="text-lg font-medium text-anahata-brown">{name}</h3>
+      <h3 className="text-lg font-medium text-anahata-brown cursor-pointer hover:text-anahata-terracotta transition-colors" onClick={handleImageClick}>{name}</h3>
       <p className="text-anahata-terracotta font-medium">{price}</p>
     </div>
   );
