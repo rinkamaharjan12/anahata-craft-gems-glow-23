@@ -25,7 +25,7 @@ const Navbar = () => {
           <div className="h-10 w-10 mr-2 overflow-hidden rounded-full border-2 border-anahata-gold">
             <img src="https://images.unsplash.com/photo-1611644233886-385e90cf9a20?q=80&w=100&auto=format&fit=crop" alt="Anahata Craft Logo" className="w-full h-full object-cover" />
           </div>
-          <span className="text-2xl md:text-3xl font-serif font-semibold text-[#574215]">
+          <span className="text-2xl md:text-3xl font-serif font-semibold text-gray-950">
             Anahata<span className="text-[#1c2a40]">Craft</span>
           </span>
         </a>
