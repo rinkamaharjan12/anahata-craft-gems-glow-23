@@ -8,21 +8,6 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
       </div>
       
-      {/* Overlay Images Container */}
-      <div className="absolute inset-0 z-1 flex items-center justify-center pointer-events-none">
-        <div className="relative w-4/5 md:w-3/4 flex flex-col md:flex-row gap-4 md:gap-8">
-          {/* Pearl Bracelets Image */}
-          <div className="w-full md:w-1/2">
-            <img src="https://images.unsplash.com/photo-1608042314453-ae338d80c427?q=80&w=1740&auto=format&fit=crop" alt="Beautiful pearl bracelets collection" className="w-full h-auto object-contain opacity-90 shadow-2xl rounded-lg" />
-          </div>
-          
-          {/* Pearl Earrings Image */}
-          <div className="w-full md:w-1/2">
-            <img src="https://images.unsplash.com/photo-1611644233886-385e90cf9a20?q=80&w=1887&auto=format&fit=crop" alt="Beautiful pearl earrings collection" className="w-full h-auto object-contain opacity-90 shadow-2xl rounded-lg" />
-          </div>
-        </div>
-      </div>
-      
       {/* Content */}
       <div className="container relative z-10">
         <div className="max-w-xl text-white">
