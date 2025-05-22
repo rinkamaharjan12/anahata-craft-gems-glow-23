@@ -15,13 +15,27 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
       </div>
       
-      {/* Overlay Image with Bracelets */}
+      {/* Overlay Images Container */}
       <div className="absolute inset-0 z-1 flex items-center justify-center pointer-events-none">
-        <img 
-          src="https://images.unsplash.com/photo-1609245340409-cad2474ab1d5?q=80&w=1887&auto=format&fit=crop"
-          alt="Beautiful bracelets collection" 
-          className="w-4/5 md:w-1/2 h-auto object-contain opacity-85 shadow-2xl"
-        />
+        <div className="relative w-4/5 md:w-3/4 flex flex-col md:flex-row gap-4 md:gap-8">
+          {/* Bracelets Image */}
+          <div className="w-full md:w-1/2">
+            <img 
+              src="https://images.unsplash.com/photo-1609245340409-cad2474ab1d5?q=80&w=1887&auto=format&fit=crop"
+              alt="Beautiful bracelets collection" 
+              className="w-full h-auto object-contain opacity-90 shadow-2xl rounded-lg"
+            />
+          </div>
+          
+          {/* Earrings Image */}
+          <div className="w-full md:w-1/2">
+            <img 
+              src="https://images.unsplash.com/photo-1631541911232-aaf11d6e4f3a?q=80&w=1887&auto=format&fit=crop"
+              alt="Beautiful earrings collection" 
+              className="w-full h-auto object-contain opacity-90 shadow-2xl rounded-lg"
+            />
+          </div>
+        </div>
       </div>
       
       {/* Content */}
