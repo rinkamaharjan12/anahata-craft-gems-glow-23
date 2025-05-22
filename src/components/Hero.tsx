@@ -1,3 +1,4 @@
+
 import React from 'react';
 const Hero = () => {
   return <section className="relative h-screen flex items-center">
@@ -25,12 +26,12 @@ const Hero = () => {
       {/* Content */}
       <div className="container relative z-10">
         <div className="max-w-xl text-white">
-          <h1 className="text-4xl font-serif font-medium mb-6 animate-fade-in text-[#1c2a40] md:text-5xl">
+          <h1 className="text-4xl font-serif font-medium mb-6 animate-fade-in text-black md:text-5xl">
             Handcrafted Jewelry For Your Soul
           </h1>
           <p style={{
           animationDelay: "0.2s"
-        }} className="text-lg mb-8 opacity-90 animate-fade-in text-[#574215] md:text-2xl">
+        }} className="text-lg mb-8 opacity-90 animate-fade-in text-black md:text-2xl">
             Discover our collection of unique, ethically-made bracelets and earrings designed to reflect your inner beauty.
           </p>
           {/* Buttons have been removed */}
