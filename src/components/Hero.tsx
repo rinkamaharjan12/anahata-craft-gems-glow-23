@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
@@ -47,21 +46,7 @@ const Hero = () => {
           <p className="text-lg md:text-xl mb-8 opacity-90 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             Discover our collection of unique, ethically-made bracelets and earrings designed to reflect your inner beauty.
           </p>
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <Button 
-              className="bg-anahata-terracotta hover:bg-anahata-brown text-white border-none px-8 py-6 text-lg"
-              asChild
-            >
-              <a href="#bracelets">Shop Bracelets</a>
-            </Button>
-            <Button 
-              variant="outline" 
-              className="bg-transparent border-white text-white hover:bg-white hover:text-anahata-brown px-8 py-6 text-lg"
-              asChild
-            >
-              <a href="#earrings">Shop Earrings</a>
-            </Button>
-          </div>
+          {/* Buttons have been removed */}
         </div>
       </div>
     </section>
