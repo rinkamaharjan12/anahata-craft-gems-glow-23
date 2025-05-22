@@ -18,7 +18,7 @@ const Hero = () => {
       {/* Content */}
       <div className="container relative z-10">
         <div className="max-w-xl text-white">
-          <h1 className="text-4xl md:text-6xl font-serif font-medium mb-6 animate-fade-in">
+          <h1 className="text-4xl md:text-6xl font-serif font-medium mb-6 animate-fade-in text-anahata-gold">
             Handcrafted Jewelry For Your Soul
           </h1>
           <p className="text-lg md:text-xl mb-8 opacity-90 animate-fade-in" style={{ animationDelay: "0.2s" }}>
