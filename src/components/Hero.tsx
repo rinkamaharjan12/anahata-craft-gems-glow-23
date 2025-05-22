@@ -4,7 +4,7 @@ const Hero = () => {
   return <section className="relative h-screen flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1598560917505-59a3ad559071?q=80&w=2340&auto=format&fit=crop" alt="Elegant jewelry display with crystals" className="w-full h-full object-cover" />
+        <img src="/lovable-uploads/ce87eabb-262f-44b8-b7a9-e31cfdd61b7c.png" alt="Elegant jewelry display with pearls and gold earrings" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
       </div>
       
