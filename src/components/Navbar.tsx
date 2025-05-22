@@ -1,13 +1,10 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Search, ShoppingCart, Menu, User } from "lucide-react";
 import { cn } from "@/lib/utils";
-
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -16,32 +13,20 @@ const Navbar = () => {
         setIsScrolled(false);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  return (
-    <header 
-      className={cn(
-        "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-        isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
-      )}
-    >
+  return <header className={cn("fixed top-0 left-0 w-full z-50 transition-all duration-300", isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4")}>
       <div className="container flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center">
           <div className="h-10 w-10 mr-2 overflow-hidden rounded-full border-2 border-anahata-gold">
-            <img 
-              src="https://images.unsplash.com/photo-1611644233886-385e90cf9a20?q=80&w=100&auto=format&fit=crop" 
-              alt="Anahata Craft Logo" 
-              className="w-full h-full object-cover"
-            />
+            <img src="https://images.unsplash.com/photo-1611644233886-385e90cf9a20?q=80&w=100&auto=format&fit=crop" alt="Anahata Craft Logo" className="w-full h-full object-cover" />
           </div>
-          <span className="text-2xl md:text-3xl font-serif font-semibold text-anahata-gold">
-            Anahata<span className="text-anahata-terracotta">Craft</span>
+          <span className="text-2xl md:text-3xl font-serif font-semibold text-[#574215]">
+            Anahata<span className="text-[#1c2a40]">Craft</span>
           </span>
         </a>
 
@@ -81,17 +66,13 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-anahata-gold"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
+        <button className="md:hidden text-anahata-gold" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
           <Menu size={24} />
         </button>
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-white py-4 shadow-md">
+      {isMobileMenuOpen && <div className="md:hidden bg-white py-4 shadow-md">
           <div className="container flex flex-col space-y-4">
             <a href="/" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
               Home
@@ -123,10 +104,7 @@ const Navbar = () => {
               </button>
             </div>
           </div>
-        </div>
-      )}
-    </header>
-  );
+        </div>}
+    </header>;
 };
-
 export default Navbar;
