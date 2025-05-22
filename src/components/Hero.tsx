@@ -8,8 +8,8 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?q=80&w=2340&auto=format&fit=crop"
-          alt="Elegant jewelry display" 
+          src="https://images.unsplash.com/photo-1598560917505-59a3ad559071?q=80&w=2340&auto=format&fit=crop"
+          alt="Elegant jewelry display with crystals" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
@@ -21,7 +21,7 @@ const Hero = () => {
           {/* Bracelets Image */}
           <div className="w-full md:w-1/2">
             <img 
-              src="https://images.unsplash.com/photo-1609245340409-cad2474ab1d5?q=80&w=1887&auto=format&fit=crop"
+              src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1887&auto=format&fit=crop"
               alt="Beautiful bracelets collection" 
               className="w-full h-auto object-contain opacity-90 shadow-2xl rounded-lg"
             />
@@ -30,7 +30,7 @@ const Hero = () => {
           {/* Earrings Image */}
           <div className="w-full md:w-1/2">
             <img 
-              src="https://images.unsplash.com/photo-1631541911232-aaf11d6e4f3a?q=80&w=1887&auto=format&fit=crop"
+              src="https://images.unsplash.com/photo-1620751824573-4bcd301a9969?q=80&w=1887&auto=format&fit=crop"
               alt="Beautiful earrings collection" 
               className="w-full h-auto object-contain opacity-90 shadow-2xl rounded-lg"
             />
