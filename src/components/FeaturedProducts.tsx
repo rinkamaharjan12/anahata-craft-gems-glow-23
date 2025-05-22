@@ -16,6 +16,16 @@ interface FeaturedProductsProps {
 }
 
 const FeaturedProducts = ({ title, viewAllLink, products }: FeaturedProductsProps) => {
+  // Handle the view all click
+  const handleViewAll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (viewAllLink === "#") {
+      e.preventDefault();
+      console.log(`View all products in category: ${title}`);
+      // This would typically navigate to a category page
+      // In the future, this could be implemented with React Router
+    }
+  };
+
   return (
     <section className="py-16 bg-anahata-cream bg-opacity-50">
       <div className="container">
@@ -26,7 +36,7 @@ const FeaturedProducts = ({ title, viewAllLink, products }: FeaturedProductsProp
             className="border-anahata-brown text-anahata-brown hover:bg-anahata-brown hover:text-white self-start md:self-auto"
             asChild
           >
-            <a href={viewAllLink}>View All</a>
+            <a href={viewAllLink} onClick={handleViewAll}>View All</a>
           </Button>
         </div>
         
