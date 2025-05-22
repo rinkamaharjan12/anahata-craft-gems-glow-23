@@ -11,7 +11,7 @@ const About = () => {
         </div>
         
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/3">
             <img 
               src="https://images.unsplash.com/photo-1566345984367-57483fb53bd1?q=80&w=2370&auto=format&fit=crop" 
               alt="Artisan crafting jewelry" 
@@ -19,7 +19,15 @@ const About = () => {
             />
           </div>
           
-          <div className="w-full md:w-1/2 text-center md:text-left">
+          <div className="w-full md:w-1/3">
+            <img 
+              src="https://images.unsplash.com/photo-1631541911232-aaf11d6e4f3a?q=80&w=1887&auto=format&fit=crop"
+              alt="Handcrafted earrings" 
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+          
+          <div className="w-full md:w-1/3 text-center md:text-left">
             <h3 className="text-2xl font-serif text-anahata-brown mb-4">Handcrafted with Love</h3>
             <p className="text-gray-700 mb-4">
               Anahata Craft was born from a passion for creating beautiful, meaningful jewelry that connects with the soul. Each piece is handcrafted with intention and love, using ethically sourced materials.
