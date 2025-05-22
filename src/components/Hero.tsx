@@ -8,8 +8,8 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=2391&auto=format&fit=crop"
-          alt="Elegant jewelry on display" 
+          src="https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?q=80&w=2340&auto=format&fit=crop"
+          alt="Elegant jewelry display" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
