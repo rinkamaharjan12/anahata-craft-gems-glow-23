@@ -22,8 +22,8 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/lovable-uploads/ce87eabb-262f-44b8-b7a9-e31cfdd61b7c.png" 
-          alt="Elegant jewelry display with pearls and gold earrings" 
+          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop" 
+          alt="Serene natural landscape with water and trees" 
           className="w-full h-full object-cover object-center shadow-lg" 
         />
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
