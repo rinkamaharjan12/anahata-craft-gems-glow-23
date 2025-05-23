@@ -191,8 +191,8 @@ const Navbar = () => {
       <div className="container flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <div className="h-10 w-10 mr-2 overflow-hidden rounded-full border-2 border-anahata-gold">
-            <img src="https://images.unsplash.com/photo-1611644233886-385e90cf9a20?q=80&w=100&auto=format&fit=crop" alt="Anahata Craft Logo" className="w-full h-full object-cover" />
+          <div className="h-12 w-12 mr-2 overflow-hidden rounded-full border-2 border-anahata-gold">
+            <img src="/lovable-uploads/45661515-f765-427c-a7b8-7f2c5704b10e.png" alt="Anahata Craft Logo" className="w-full h-full object-cover" />
           </div>
           <span className="text-2xl md:text-3xl font-serif font-bold tracking-wider text-slate-950">
             Anahata<span className="drop-shadow-sm text-slate-950">Craft</span>
