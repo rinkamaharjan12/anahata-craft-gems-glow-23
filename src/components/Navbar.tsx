@@ -1,10 +1,14 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Search, ShoppingCart, Menu, User } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -18,29 +22,33 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  
   return <header className={cn("fixed top-0 left-0 w-full z-50 transition-all duration-300", isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4")}>
       <div className="container flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <div className="h-10 w-10 mr-2 overflow-hidden rounded-full border-2 border-anahata-gold">
             <img src="https://images.unsplash.com/photo-1611644233886-385e90cf9a20?q=80&w=100&auto=format&fit=crop" alt="Anahata Craft Logo" className="w-full h-full object-cover" />
           </div>
           <span className="text-2xl md:text-3xl font-serif font-bold tracking-wider text-slate-950">
             Anahata<span className="drop-shadow-sm text-slate-950">Craft</span>
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="/" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
+          <Link to="/" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
             Home
-          </a>
+          </Link>
           <a href="#bracelets" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
             Bracelets
           </a>
           <a href="#earrings" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
             Earrings
           </a>
+          <Link to="/blog" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
+            Blog
+          </Link>
           <a href="#about" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
             About
           </a>
@@ -74,15 +82,18 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && <div className="md:hidden bg-white py-4 shadow-md">
           <div className="container flex flex-col space-y-4">
-            <a href="/" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
+            <Link to="/" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
               Home
-            </a>
+            </Link>
             <a href="#bracelets" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
               Bracelets
             </a>
             <a href="#earrings" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
               Earrings
             </a>
+            <Link to="/blog" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
+              Blog
+            </Link>
             <a href="#about" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
               About
             </a>
@@ -107,4 +118,5 @@ const Navbar = () => {
         </div>}
     </header>;
 };
+
 export default Navbar;

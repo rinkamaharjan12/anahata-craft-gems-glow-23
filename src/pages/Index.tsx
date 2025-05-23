@@ -7,6 +7,7 @@ import FeaturedProducts from '@/components/FeaturedProducts';
 import About from '@/components/About';
 import Newsletter from '@/components/Newsletter';
 import Footer from '@/components/Footer';
+import Blogs from '@/components/Blogs';
 
 const Index = () => {
   // Bracelet products data
@@ -107,6 +108,34 @@ const Index = () => {
     }
   ];
 
+  // Blog posts data for homepage
+  const blogPosts = [
+    {
+      id: "how-to-cleanse-your-crystals",
+      title: "How to Cleanse and Charge Your Crystal Jewelry",
+      excerpt: "Learn the best practices for maintaining the energy of your crystal jewelry with these simple cleansing techniques.",
+      image: "https://images.unsplash.com/photo-1591977733835-e46416051b49?q=80&w=1887&auto=format&fit=crop",
+      category: "Care Guide",
+      date: "May 15, 2025"
+    },
+    {
+      id: "healing-properties-of-amethyst",
+      title: "The Healing Properties of Amethyst in Jewelry",
+      excerpt: "Discover the calming and protective benefits of wearing amethyst in your daily life.",
+      image: "https://images.unsplash.com/photo-1609129318559-a036a97ee8c7?q=80&w=1887&auto=format&fit=crop",
+      category: "Crystal Properties",
+      date: "May 8, 2025"
+    },
+    {
+      id: "sustainable-jewelry-practices",
+      title: "Our Commitment to Sustainable Jewelry Practices",
+      excerpt: "How Anahata Craft ensures our jewelry production respects both people and planet.",
+      image: "https://images.unsplash.com/photo-1621110614914-4bf1af9a3bc7?q=80&w=1887&auto=format&fit=crop",
+      category: "Sustainability",
+      date: "April 22, 2025"
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       {/* Navbar */}
@@ -147,6 +176,12 @@ const Index = () => {
         title="Featured Earrings"
         viewAllLink="/collections/earrings"
         products={earringProducts}
+      />
+      
+      {/* Blog Section */}
+      <Blogs 
+        title="From Our Journal"
+        posts={blogPosts}
       />
       
       {/* About Section */}
