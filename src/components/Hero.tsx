@@ -3,6 +3,13 @@ import React from 'react';
 import { Button } from './ui/button';
 
 const Hero = () => {
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative h-screen flex items-center">
       {/* Background Image */}
@@ -50,7 +57,12 @@ const Hero = () => {
                 <Button size="lg" className="bg-anahata-terracotta hover:bg-anahata-brown text-white font-medium px-8 py-6 text-lg">
                   Shop Now
                 </Button>
-                <Button size="lg" variant="outline" className="bg-white/80 border-anahata-terracotta text-anahata-brown hover:bg-white px-8 py-6 text-lg">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="bg-white/80 border-anahata-terracotta text-anahata-brown hover:bg-white px-8 py-6 text-lg"
+                  onClick={scrollToAbout}
+                >
                   Our Story
                 </Button>
               </div>
