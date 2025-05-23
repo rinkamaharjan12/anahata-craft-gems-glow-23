@@ -12,7 +12,7 @@ const blogPosts = [
     id: "how-to-cleanse-your-crystals",
     title: "How to Cleanse and Charge Your Crystal Jewelry",
     excerpt: "Learn the best practices for maintaining the energy of your crystal jewelry with these simple cleansing techniques.",
-    image: "https://images.unsplash.com/photo-1591977733835-e46416051b49?q=80&w=1887&auto=format&fit=crop",
+    image: "/lovable-uploads/4df5781e-b537-416f-b605-9df6ea5a3081.png",
     category: "Care Guide",
     date: "May 15, 2025",
     featured: true
@@ -21,7 +21,7 @@ const blogPosts = [
     id: "healing-properties-of-amethyst",
     title: "The Healing Properties of Amethyst in Jewelry",
     excerpt: "Discover the calming and protective benefits of wearing amethyst in your daily life.",
-    image: "https://images.unsplash.com/photo-1609129318559-a036a97ee8c7?q=80&w=1887&auto=format&fit=crop",
+    image: "/lovable-uploads/4df5781e-b537-416f-b605-9df6ea5a3081.png",
     category: "Crystal Properties",
     date: "May 8, 2025",
     featured: true
@@ -30,7 +30,7 @@ const blogPosts = [
     id: "sustainable-jewelry-practices",
     title: "Our Commitment to Sustainable Jewelry Practices",
     excerpt: "How Anahata Craft ensures our jewelry production respects both people and planet.",
-    image: "https://images.unsplash.com/photo-1621110614914-4bf1af9a3bc7?q=80&w=1887&auto=format&fit=crop",
+    image: "/lovable-uploads/4df5781e-b537-416f-b605-9df6ea5a3081.png",
     category: "Sustainability",
     date: "April 22, 2025",
     featured: true
@@ -39,7 +39,7 @@ const blogPosts = [
     id: "styling-tips-for-summer",
     title: "How to Style Your Handcrafted Jewelry for Summer",
     excerpt: "Get inspired with our favorite ways to pair your Anahata pieces with summer outfits.",
-    image: "https://images.unsplash.com/photo-1622434641406-a158123450f9?q=80&w=1887&auto=format&fit=crop",
+    image: "/lovable-uploads/4df5781e-b537-416f-b605-9df6ea5a3081.png",
     category: "Style Guide",
     date: "April 12, 2025"
   },
@@ -47,7 +47,7 @@ const blogPosts = [
     id: "chakra-balancing-with-jewelry",
     title: "Chakra Balancing: Using Jewelry for Energy Alignment",
     excerpt: "Understanding how different gemstones can help balance your chakras and enhance wellbeing.",
-    image: "https://images.unsplash.com/photo-1622161405908-568ef598f90c?q=80&w=1887&auto=format&fit=crop",
+    image: "/lovable-uploads/4df5781e-b537-416f-b605-9df6ea5a3081.png",
     category: "Spiritual Wellness",
     date: "March 30, 2025"
   },
@@ -55,7 +55,7 @@ const blogPosts = [
     id: "behind-the-scenes-artisans",
     title: "Behind the Scenes: Meet Our Artisan Craftspeople",
     excerpt: "The skilled hands and creative minds behind each piece of Anahata Craft jewelry.",
-    image: "https://images.unsplash.com/photo-1617796110636-cc51a908326c?q=80&w=1887&auto=format&fit=crop",
+    image: "/lovable-uploads/4df5781e-b537-416f-b605-9df6ea5a3081.png",
     category: "Meet the Team",
     date: "March 18, 2025"
   },
@@ -63,7 +63,7 @@ const blogPosts = [
     id: "seasonal-gemstone-guide",
     title: "Seasonal Gemstone Guide: Choosing the Perfect Stone",
     excerpt: "How to select gemstones that align with each season's energy and your personal needs.",
-    image: "https://images.unsplash.com/photo-1598467557298-8d472e5a72fe?q=80&w=1887&auto=format&fit=crop",
+    image: "/lovable-uploads/4df5781e-b537-416f-b605-9df6ea5a3081.png",
     category: "Crystal Properties",
     date: "March 5, 2025"
   },
@@ -71,7 +71,7 @@ const blogPosts = [
     id: "layering-necklaces-guide",
     title: "The Art of Layering: Creating the Perfect Necklace Stack",
     excerpt: "Tips and tricks for mastering the layered jewelry trend with our adjustable pieces.",
-    image: "https://images.unsplash.com/photo-1626784215021-2e39ccad6da1?q=80&w=1932&auto=format&fit=crop",
+    image: "/lovable-uploads/4df5781e-b537-416f-b605-9df6ea5a3081.png",
     category: "Style Guide",
     date: "February 20, 2025"
   }

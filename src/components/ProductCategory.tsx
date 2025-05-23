@@ -18,7 +18,7 @@ const ProductCategory = ({ title, description, image, link, id, reverse }: Produ
         <div className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8 md:gap-16`}>
           <div className="w-full md:w-1/2">
             <img 
-              src={image} 
+              src="/lovable-uploads/4df5781e-b537-416f-b605-9df6ea5a3081.png" 
               alt={title} 
               className="w-full h-[400px] md:h-[500px] object-cover rounded-lg shadow-lg hover-scale"
             />

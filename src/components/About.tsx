@@ -1,3 +1,4 @@
+
 import React from 'react';
 const About = () => {
   return <section id="about" className="py-16 md:py-24">
@@ -9,11 +10,11 @@ const About = () => {
         
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
           <div className="w-full md:w-1/3">
-            <img src="https://images.unsplash.com/photo-1566345984367-57483fb53bd1?q=80&w=2370&auto=format&fit=crop" alt="Artisan crafting jewelry" className="w-full h-auto rounded-lg shadow-lg" />
+            <img src="/lovable-uploads/4df5781e-b537-416f-b605-9df6ea5a3081.png" alt="Artisan crafting jewelry" className="w-full h-auto rounded-lg shadow-lg" />
           </div>
           
           <div className="w-full md:w-1/3">
-            <img src="https://images.unsplash.com/photo-1631541911232-aaf11d6e4f3a?q=80&w=1887&auto=format&fit=crop" alt="Handcrafted earrings" className="w-full h-auto rounded-lg shadow-lg" />
+            <img src="/lovable-uploads/4df5781e-b537-416f-b605-9df6ea5a3081.png" alt="Handcrafted earrings" className="w-full h-auto rounded-lg shadow-lg" />
           </div>
           
           <div className="w-full md:w-1/3 text-center md:text-left">

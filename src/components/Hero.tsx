@@ -38,7 +38,7 @@ const Hero = () => {
             {/* New jewelry collection image */}
             <div className="w-full md:w-1/2">
               <img 
-                src="/lovable-uploads/06bfd6a3-de19-43ba-8cf4-e37510116733.png" 
+                src="/lovable-uploads/4df5781e-b537-416f-b605-9df6ea5a3081.png" 
                 alt="Collection of gold and silver jewelry including necklaces, bracelets, earrings and rings" 
                 className="rounded-lg shadow-md hover-scale"
               />
