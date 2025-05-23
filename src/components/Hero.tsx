@@ -19,19 +19,21 @@ const Hero = () => {
 
   return (
     <section className="relative h-screen flex items-center">
-      {/* Background Image */}
+      {/* Background Image with reduced opacity */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="/lovable-uploads/4df5781e-b537-416f-b605-9df6ea5a3081.png" 
-          alt="Beautiful collection of gold and silver jewelry with gemstones and pearls arranged as a frame" 
-          className="w-full h-full object-cover object-center shadow-lg" 
-        />
-        <div className="absolute inset-0 bg-white bg-opacity-20"></div>
+        <div className="relative w-full h-full">
+          <img 
+            src="/lovable-uploads/4df5781e-b537-416f-b605-9df6ea5a3081.png" 
+            alt="Beautiful collection of gold and silver jewelry with gemstones and pearls arranged as a frame" 
+            className="w-full h-full object-cover object-center shadow-lg opacity-60" 
+          />
+          <div className="absolute inset-0 bg-white bg-opacity-40"></div>
+        </div>
       </div>
       
       {/* Content */}
       <div className="container relative z-10">
-        <div className="max-w-4xl mx-auto backdrop-blur-sm bg-white/40 p-10 rounded-xl shadow-xl border border-white/20">
+        <div className="max-w-4xl mx-auto backdrop-blur-sm bg-white/50 p-10 rounded-xl shadow-xl border border-white/20">
           <div className="flex flex-col md:flex-row gap-6 items-center">
             {/* New jewelry collection image */}
             <div className="w-full md:w-1/2">
