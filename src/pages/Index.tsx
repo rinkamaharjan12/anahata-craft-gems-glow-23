@@ -32,6 +32,29 @@ const Index = () => {
       name: "Bamboo Silver Cuff Bracelet",
       price: "$49.99",
       image: "https://images.unsplash.com/photo-1626784215021-2e39ccad6da1?q=80&w=1932&auto=format&fit=crop"
+    },
+    // New bracelets added below
+    {
+      name: "Amethyst Protection Bracelet",
+      price: "$45.99",
+      image: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?q=80&w=1887&auto=format&fit=crop"
+    },
+    {
+      name: "Lotus Gemstone Wrap Bracelet",
+      price: "$38.99",
+      image: "https://images.unsplash.com/photo-1631729779674-1b0e6ae3010f?q=80&w=1887&auto=format&fit=crop",
+      isNew: true
+    },
+    {
+      name: "Chakra Balance Beaded Bracelet",
+      price: "$37.99",
+      image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3"
+    },
+    {
+      name: "Moonstone Meditation Bracelet",
+      price: "$52.99",
+      image: "https://images.unsplash.com/photo-1603974372039-adc49044b6bd?q=80&w=1964&auto=format&fit=crop",
+      isBestseller: true
     }
   ];
   
