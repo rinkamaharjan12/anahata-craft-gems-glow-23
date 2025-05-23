@@ -17,6 +17,9 @@ const ProductCard = ({ name, price, image, isNew, isBestseller }: ProductCardPro
   const [isWishlisted, setIsWishlisted] = useState(false);
   const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
   
+  // Generate a product ID based on name
+  const productId = name.toLowerCase().replace(/\s+/g, '-');
+  
   // Handle product image click
   const handleImageClick = () => {
     console.log(`Product clicked: ${name}`);
@@ -44,10 +47,17 @@ const ProductCard = ({ name, price, image, isNew, isBestseller }: ProductCardPro
   const handleAddToCart = (e: React.MouseEvent) => {
     e.stopPropagation(); // Prevent triggering the card click
     
-    toast({
-      title: "Added to Cart",
-      description: `${name} has been added to your cart`,
-    });
+    // Create product data
+    const product = {
+      id: productId,
+      name,
+      price,
+      image
+    };
+    
+    // Dispatch a custom event to add the item to the cart
+    const event = new CustomEvent('add-to-cart', { detail: product });
+    window.dispatchEvent(event);
     
     console.log(`Added to cart: ${name}`);
   };
