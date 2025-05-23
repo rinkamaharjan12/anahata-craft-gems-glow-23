@@ -1,7 +1,9 @@
 
 import React, { useState } from 'react';
-import { Heart } from "lucide-react";
+import { Heart, ShoppingCart, Eye } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 interface ProductCardProps {
   name: string;
@@ -13,6 +15,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ name, price, image, isNew, isBestseller }: ProductCardProps) => {
   const [isWishlisted, setIsWishlisted] = useState(false);
+  const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
   
   // Handle product image click
   const handleImageClick = () => {
@@ -35,6 +38,25 @@ const ProductCard = ({ name, price, image, isNew, isBestseller }: ProductCardPro
     });
     
     console.log(`${isWishlisted ? "Removed from" : "Added to"} wishlist: ${name}`);
+  };
+  
+  // Handle add to cart
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent triggering the card click
+    
+    toast({
+      title: "Added to Cart",
+      description: `${name} has been added to your cart`,
+    });
+    
+    console.log(`Added to cart: ${name}`);
+  };
+  
+  // Handle quick view
+  const handleQuickView = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent triggering the card click
+    setIsQuickViewOpen(true);
+    console.log(`Quick view: ${name}`);
   };
 
   return (
@@ -63,13 +85,18 @@ const ProductCard = ({ name, price, image, isNew, isBestseller }: ProductCardPro
         {/* Quick actions */}
         <div className="absolute -bottom-10 left-0 right-0 bg-white bg-opacity-90 py-2 flex justify-center opacity-0 group-hover:bottom-0 group-hover:opacity-100 transition-all duration-300">
           <button 
-            className="mx-2 text-anahata-brown hover:text-anahata-terracotta transition-colors"
-            onClick={handleImageClick}
+            className="mx-2 text-anahata-brown hover:text-anahata-terracotta transition-colors flex items-center gap-1"
+            onClick={handleQuickView}
           >
+            <Eye size={16} />
             Quick view
           </button>
           <div className="w-px bg-gray-300"></div>
-          <button className="mx-2 text-anahata-brown hover:text-anahata-terracotta transition-colors">
+          <button 
+            className="mx-2 text-anahata-brown hover:text-anahata-terracotta transition-colors flex items-center gap-1"
+            onClick={handleAddToCart}
+          >
+            <ShoppingCart size={16} />
             Add to cart
           </button>
         </div>
@@ -90,6 +117,38 @@ const ProductCard = ({ name, price, image, isNew, isBestseller }: ProductCardPro
       {/* Product Info */}
       <h3 className="text-lg font-medium text-anahata-brown cursor-pointer hover:text-anahata-terracotta transition-colors" onClick={handleImageClick}>{name}</h3>
       <p className="text-anahata-terracotta font-medium">{price}</p>
+      
+      {/* Quick View Dialog */}
+      <Dialog open={isQuickViewOpen} onOpenChange={setIsQuickViewOpen}>
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle>{name}</DialogTitle>
+          </DialogHeader>
+          <div className="grid gap-4 py-4">
+            <div className="flex items-center justify-center">
+              <img src={image} alt={name} className="w-full max-h-[300px] object-cover rounded-lg" />
+            </div>
+            <div className="flex flex-col gap-2">
+              <p className="text-anahata-terracotta font-medium">{price}</p>
+              <p className="text-muted-foreground">
+                This is a quick view of the product. In a complete implementation, 
+                this would show more details about the product.
+              </p>
+            </div>
+          </div>
+          <div className="flex justify-between">
+            <Button variant="outline" onClick={() => setIsQuickViewOpen(false)}>
+              Close
+            </Button>
+            <Button onClick={(e) => {
+              handleAddToCart(e);
+              setIsQuickViewOpen(false);
+            }}>
+              Add to Cart
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
