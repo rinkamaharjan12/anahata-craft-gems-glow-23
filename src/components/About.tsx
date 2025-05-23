@@ -10,11 +10,11 @@ const About = () => {
         
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
           <div className="w-full md:w-1/3">
-            <img src="/lovable-uploads/4df5781e-b537-416f-b605-9df6ea5a3081.png" alt="Artisan crafting jewelry" className="w-full h-auto rounded-lg shadow-lg" />
+            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1974&auto=format&fit=crop" alt="Artisan crafting jewelry" className="w-full h-auto rounded-lg shadow-lg" />
           </div>
           
           <div className="w-full md:w-1/3">
-            <img src="/lovable-uploads/4df5781e-b537-416f-b605-9df6ea5a3081.png" alt="Handcrafted earrings" className="w-full h-auto rounded-lg shadow-lg" />
+            <img src="https://images.unsplash.com/photo-1630018548696-e1900d3da82b?q=80&w=1780&auto=format&fit=crop" alt="Handcrafted earrings" className="w-full h-auto rounded-lg shadow-lg" />
           </div>
           
           <div className="w-full md:w-1/3 text-center md:text-left">

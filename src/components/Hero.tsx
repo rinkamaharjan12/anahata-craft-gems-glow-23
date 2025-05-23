@@ -23,7 +23,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <div className="relative w-full h-full">
           <img 
-            src="/lovable-uploads/4df5781e-b537-416f-b605-9df6ea5a3081.png" 
+            src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=2070&auto=format&fit=crop" 
             alt="Beautiful collection of gold and silver jewelry with gemstones and pearls arranged as a frame" 
             className="w-full h-full object-cover object-center shadow-lg opacity-60" 
           />
@@ -38,7 +38,7 @@ const Hero = () => {
             {/* New jewelry collection image */}
             <div className="w-full md:w-1/2">
               <img 
-                src="/lovable-uploads/4df5781e-b537-416f-b605-9df6ea5a3081.png" 
+                src="https://images.unsplash.com/photo-1630794892434-e8b6ba7fd630?q=80&w=1932&auto=format&fit=crop" 
                 alt="Collection of gold and silver jewelry including necklaces, bracelets, earrings and rings" 
                 className="rounded-lg shadow-md hover-scale"
               />
