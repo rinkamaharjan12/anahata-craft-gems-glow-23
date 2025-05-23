@@ -81,6 +81,29 @@ const Index = () => {
       name: "Celestial Crystal Danglers",
       price: "$38.99",
       image: "https://images.unsplash.com/photo-1651047908022-3023e12e657d?q=80&w=1888&auto=format&fit=crop"
+    },
+    // Adding new earrings
+    {
+      name: "Lotus Petal Drop Earrings",
+      price: "$32.99",
+      image: "https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=1887&auto=format&fit=crop",
+      isNew: true
+    },
+    {
+      name: "Golden Bamboo Hoops",
+      price: "$41.99",
+      image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1887&auto=format&fit=crop"
+    },
+    {
+      name: "Rose Quartz Healing Studs",
+      price: "$34.99",
+      image: "https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?q=80&w=1887&auto=format&fit=crop"
+    },
+    {
+      name: "Chakra Gemstone Danglers",
+      price: "$43.99",
+      image: "https://images.unsplash.com/photo-1627293509201-cd0c780043e6?q=80&w=1887&auto=format&fit=crop",
+      isBestseller: true
     }
   ];
 
