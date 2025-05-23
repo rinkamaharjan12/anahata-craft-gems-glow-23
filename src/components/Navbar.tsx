@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { toast } from "@/hooks/use-toast";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
 
 // Define the cart item interface
 interface CartItem {
@@ -16,10 +18,111 @@ interface CartItem {
   quantity: number;
 }
 
+// Define a product interface for search
+interface Product {
+  id: string;
+  name: string;
+  price: string;
+  image: string;
+  isNew?: boolean;
+  isBestseller?: boolean;
+}
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<Product[]>([]);
+  
+  // Create a sample product database (in a real application, this would come from an API)
+  const sampleProducts = [
+    {
+      id: "ocean-wave-beaded-bracelet",
+      name: "Ocean Wave Beaded Bracelet",
+      price: "$34.99",
+      image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1974&auto=format&fit=crop",
+      isNew: true
+    },
+    {
+      id: "golden-lotus-charm-bracelet",
+      name: "Golden Lotus Charm Bracelet",
+      price: "$42.99",
+      image: "https://images.unsplash.com/photo-1609245340409-cad2474ab1d5?q=80&w=1887&auto=format&fit=crop",
+      isBestseller: true
+    },
+    {
+      id: "aventurine-healing-stone-bracelet",
+      name: "Aventurine Healing Stone Bracelet",
+      price: "$39.99",
+      image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=1965&auto=format&fit=crop"
+    },
+    {
+      id: "bamboo-silver-cuff-bracelet",
+      name: "Bamboo Silver Cuff Bracelet",
+      price: "$49.99",
+      image: "https://images.unsplash.com/photo-1626784215021-2e39ccad6da1?q=80&w=1932&auto=format&fit=crop"
+    },
+    {
+      id: "boho-leaf-drop-earrings",
+      name: "Boho Leaf Drop Earrings",
+      price: "$29.99",
+      image: "https://images.unsplash.com/photo-1631541911232-aaf11d6e4f3a?q=80&w=1887&auto=format&fit=crop",
+      isNew: true
+    },
+    {
+      id: "turquoise-moon-hoops",
+      name: "Turquoise Moon Hoops",
+      price: "$36.99",
+      image: "https://images.unsplash.com/photo-1629224316810-9d8805b95e76?q=80&w=1770&auto=format&fit=crop",
+      isBestseller: true
+    },
+    {
+      id: "wooden-geometric-studs",
+      name: "Wooden Geometric Studs",
+      price: "$24.99",
+      image: "https://images.unsplash.com/photo-1589405858862-2ac9cbbff8c5?q=80&w=1780&auto=format&fit=crop"
+    },
+    {
+      id: "celestial-crystal-danglers",
+      name: "Celestial Crystal Danglers",
+      price: "$38.99",
+      image: "https://images.unsplash.com/photo-1651047908022-3023e12e657d?q=80&w=1888&auto=format&fit=crop"
+    },
+  ];
+
+  // Function to handle search
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+    
+    if (query.trim() === "") {
+      setSearchResults([]);
+      return;
+    }
+    
+    // Filter products based on search query
+    const results = sampleProducts.filter(product => 
+      product.name.toLowerCase().includes(query.toLowerCase())
+    );
+    
+    setSearchResults(results);
+  };
+
+  // Function to select a search result
+  const selectSearchResult = (product: Product) => {
+    setIsSearchOpen(false);
+    setSearchQuery("");
+    setSearchResults([]);
+    
+    toast({
+      title: "Product Selected",
+      description: `You selected ${product.name}`,
+    });
+    
+    // In a real app, this would navigate to the product detail page
+    console.log(`Selected product: ${product.name}`);
+  };
   
   useEffect(() => {
     const handleScroll = () => {
@@ -120,9 +223,64 @@ const Navbar = () => {
 
         {/* Desktop Icons */}
         <div className="hidden md:flex items-center space-x-4">
-          <button className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
-            <Search size={20} />
-          </button>
+          <Dialog open={isSearchOpen} onOpenChange={setIsSearchOpen}>
+            <button 
+              className="text-anahata-gold hover:text-anahata-terracotta transition-colors"
+              onClick={() => setIsSearchOpen(true)}
+            >
+              <Search size={20} />
+            </button>
+            <DialogContent className="sm:max-w-md">
+              <DialogHeader>
+                <DialogTitle>Search Products</DialogTitle>
+              </DialogHeader>
+              <div className="flex items-center border rounded-md px-3 py-2 mt-2">
+                <Search className="h-4 w-4 mr-2 text-gray-500" />
+                <Input
+                  placeholder="Search for jewelry..."
+                  className="flex-1 border-0 focus-visible:ring-0 focus-visible:ring-transparent"
+                  value={searchQuery}
+                  onChange={(e) => handleSearch(e.target.value)}
+                />
+                {searchQuery && (
+                  <button 
+                    className="text-gray-500"
+                    onClick={() => {
+                      setSearchQuery("");
+                      setSearchResults([]);
+                    }}
+                  >
+                    <X size={16} />
+                  </button>
+                )}
+              </div>
+              <div className="mt-4 max-h-[300px] overflow-y-auto">
+                {searchResults.length === 0 && searchQuery.trim() !== "" ? (
+                  <p className="text-center text-gray-500 py-4">No products found</p>
+                ) : (
+                  searchResults.map(product => (
+                    <div 
+                      key={product.id} 
+                      className="flex items-center gap-3 p-2 hover:bg-gray-100 rounded-md cursor-pointer"
+                      onClick={() => selectSearchResult(product)}
+                    >
+                      <div className="h-12 w-12 rounded-md overflow-hidden">
+                        <img 
+                          src={product.image} 
+                          alt={product.name} 
+                          className="h-full w-full object-cover" 
+                        />
+                      </div>
+                      <div>
+                        <p className="font-medium">{product.name}</p>
+                        <p className="text-sm text-gray-500">{product.price}</p>
+                      </div>
+                    </div>
+                  ))
+                )}
+              </div>
+            </DialogContent>
+          </Dialog>
           <button className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
             <User size={20} />
           </button>
@@ -207,9 +365,64 @@ const Navbar = () => {
               Contact
             </a>
             <div className="flex items-center space-x-4 pt-2">
-              <button className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
-                <Search size={20} />
-              </button>
+              <Dialog open={isSearchOpen} onOpenChange={setIsSearchOpen}>
+                <button 
+                  className="text-anahata-gold hover:text-anahata-terracotta transition-colors"
+                  onClick={() => setIsSearchOpen(true)}
+                >
+                  <Search size={20} />
+                </button>
+                <DialogContent className="w-full sm:max-w-md">
+                  <DialogHeader>
+                    <DialogTitle>Search Products</DialogTitle>
+                  </DialogHeader>
+                  <div className="flex items-center border rounded-md px-3 py-2 mt-2">
+                    <Search className="h-4 w-4 mr-2 text-gray-500" />
+                    <Input
+                      placeholder="Search for jewelry..."
+                      className="flex-1 border-0 focus-visible:ring-0 focus-visible:ring-transparent"
+                      value={searchQuery}
+                      onChange={(e) => handleSearch(e.target.value)}
+                    />
+                    {searchQuery && (
+                      <button 
+                        className="text-gray-500"
+                        onClick={() => {
+                          setSearchQuery("");
+                          setSearchResults([]);
+                        }}
+                      >
+                        <X size={16} />
+                      </button>
+                    )}
+                  </div>
+                  <div className="mt-4 max-h-[300px] overflow-y-auto">
+                    {searchResults.length === 0 && searchQuery.trim() !== "" ? (
+                      <p className="text-center text-gray-500 py-4">No products found</p>
+                    ) : (
+                      searchResults.map(product => (
+                        <div 
+                          key={product.id} 
+                          className="flex items-center gap-3 p-2 hover:bg-gray-100 rounded-md cursor-pointer"
+                          onClick={() => selectSearchResult(product)}
+                        >
+                          <div className="h-12 w-12 rounded-md overflow-hidden">
+                            <img 
+                              src={product.image} 
+                              alt={product.name} 
+                              className="h-full w-full object-cover" 
+                            />
+                          </div>
+                          <div>
+                            <p className="font-medium">{product.name}</p>
+                            <p className="text-sm text-gray-500">{product.price}</p>
+                          </div>
+                        </div>
+                      ))
+                    )}
+                  </div>
+                </DialogContent>
+              </Dialog>
               <button className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
                 <User size={20} />
               </button>
