@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Search, ShoppingCart, Menu, User } from "lucide-react";
@@ -26,8 +25,8 @@ const Navbar = () => {
           <div className="h-10 w-10 mr-2 overflow-hidden rounded-full border-2 border-anahata-gold">
             <img src="https://images.unsplash.com/photo-1611644233886-385e90cf9a20?q=80&w=100&auto=format&fit=crop" alt="Anahata Craft Logo" className="w-full h-full object-cover" />
           </div>
-          <span className="text-2xl md:text-3xl font-serif font-bold tracking-wider text-anahata-terracotta">
-            Anahata<span className="text-anahata-gold drop-shadow-sm">Craft</span>
+          <span className="text-2xl md:text-3xl font-serif font-bold tracking-wider text-slate-950">
+            Anahata<span className="drop-shadow-sm text-slate-950">Craft</span>
           </span>
         </a>
 
