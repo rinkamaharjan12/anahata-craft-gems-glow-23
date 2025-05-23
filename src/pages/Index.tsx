@@ -98,14 +98,14 @@ const Index = () => {
         title="Bracelets Collection"
         description="Our handcrafted bracelets blend natural elements with artisanal craftsmanship. Each piece is designed to enhance your natural beauty and connect with your spirit."
         image="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=1965&auto=format&fit=crop"
-        link="#"
+        link="/collections/bracelets"
         reverse={false}
       />
       
       {/* Featured Bracelets */}
       <FeaturedProducts
         title="Featured Bracelets"
-        viewAllLink="#"
+        viewAllLink="/collections/bracelets"
         products={braceletProducts}
       />
       
@@ -115,14 +115,14 @@ const Index = () => {
         title="Earrings Collection"
         description="Express your unique style with our collection of handcrafted earrings. From subtle studs to statement pieces, find the perfect accent for any occasion."
         image="https://images.unsplash.com/photo-1631541911232-aaf11d6e4f3a?q=80&w=1887&auto=format&fit=crop"
-        link="#"
+        link="/collections/earrings"
         reverse={true}
       />
       
       {/* Featured Earrings */}
       <FeaturedProducts
         title="Featured Earrings"
-        viewAllLink="#"
+        viewAllLink="/collections/earrings"
         products={earringProducts}
       />
       
