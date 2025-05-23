@@ -22,11 +22,11 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop" 
-          alt="Serene natural landscape with water and trees" 
+          src="/lovable-uploads/4df5781e-b537-416f-b605-9df6ea5a3081.png" 
+          alt="Beautiful collection of gold and silver jewelry with gemstones and pearls arranged as a frame" 
           className="w-full h-full object-cover object-center shadow-lg" 
         />
-        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div className="absolute inset-0 bg-white bg-opacity-20"></div>
       </div>
       
       {/* Content */}
