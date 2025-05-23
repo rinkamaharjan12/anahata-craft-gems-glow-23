@@ -1,13 +1,20 @@
 
 import React from 'react';
 import { Button } from './ui/button';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+  const navigate = useNavigate();
+  
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const navigateToShop = () => {
+    navigate('/collections/all');
   };
 
   return (
@@ -54,7 +61,11 @@ const Hero = () => {
                 }} 
                 className="flex flex-wrap gap-4 animate-fade-in justify-center md:justify-start"
               >
-                <Button size="lg" className="bg-anahata-terracotta hover:bg-anahata-brown text-white font-medium px-8 py-6 text-lg">
+                <Button 
+                  size="lg" 
+                  className="bg-anahata-terracotta hover:bg-anahata-brown text-white font-medium px-8 py-6 text-lg"
+                  onClick={navigateToShop}
+                >
                   Shop Now
                 </Button>
                 <Button 
