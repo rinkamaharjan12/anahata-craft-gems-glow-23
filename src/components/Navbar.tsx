@@ -201,22 +201,22 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
+          <Link to="/" className="text-black hover:text-anahata-terracotta transition-colors">
             Home
           </Link>
-          <a href="#bracelets" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
+          <a href="#bracelets" className="text-black hover:text-anahata-terracotta transition-colors">
             Bracelets
           </a>
-          <a href="#earrings" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
+          <a href="#earrings" className="text-black hover:text-anahata-terracotta transition-colors">
             Earrings
           </a>
-          <Link to="/blog" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
+          <Link to="/blog" className="text-black hover:text-anahata-terracotta transition-colors">
             Blog
           </Link>
-          <a href="#about" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
+          <a href="#about" className="text-black hover:text-anahata-terracotta transition-colors">
             About
           </a>
-          <a href="#contact" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
+          <a href="#contact" className="text-black hover:text-anahata-terracotta transition-colors">
             Contact
           </a>
         </nav>
@@ -225,7 +225,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-4">
           <Dialog open={isSearchOpen} onOpenChange={setIsSearchOpen}>
             <button 
-              className="text-anahata-gold hover:text-anahata-terracotta transition-colors"
+              className="text-black hover:text-anahata-terracotta transition-colors"
               onClick={() => setIsSearchOpen(true)}
             >
               <Search size={20} />
@@ -281,12 +281,12 @@ const Navbar = () => {
               </div>
             </DialogContent>
           </Dialog>
-          <button className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
+          <button className="text-black hover:text-anahata-terracotta transition-colors">
             <User size={20} />
           </button>
           <Popover>
             <PopoverTrigger asChild>
-              <button className="relative text-anahata-gold hover:text-anahata-terracotta transition-colors">
+              <button className="relative text-black hover:text-anahata-terracotta transition-colors">
                 <ShoppingCart size={20} />
                 <span className="absolute -top-2 -right-2 bg-anahata-terracotta text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
                   {cartItemCount}
@@ -338,7 +338,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-anahata-gold" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+        <button className="md:hidden text-black" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
           <Menu size={24} />
         </button>
       </div>
@@ -346,28 +346,28 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && <div className="md:hidden bg-white py-4 shadow-md">
           <div className="container flex flex-col space-y-4">
-            <Link to="/" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
+            <Link to="/" className="text-black hover:text-anahata-terracotta transition-colors">
               Home
             </Link>
-            <a href="#bracelets" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
+            <a href="#bracelets" className="text-black hover:text-anahata-terracotta transition-colors">
               Bracelets
             </a>
-            <a href="#earrings" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
+            <a href="#earrings" className="text-black hover:text-anahata-terracotta transition-colors">
               Earrings
             </a>
-            <Link to="/blog" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
+            <Link to="/blog" className="text-black hover:text-anahata-terracotta transition-colors">
               Blog
             </Link>
-            <a href="#about" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
+            <a href="#about" className="text-black hover:text-anahata-terracotta transition-colors">
               About
             </a>
-            <a href="#contact" className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
+            <a href="#contact" className="text-black hover:text-anahata-terracotta transition-colors">
               Contact
             </a>
             <div className="flex items-center space-x-4 pt-2">
               <Dialog open={isSearchOpen} onOpenChange={setIsSearchOpen}>
                 <button 
-                  className="text-anahata-gold hover:text-anahata-terracotta transition-colors"
+                  className="text-black hover:text-anahata-terracotta transition-colors"
                   onClick={() => setIsSearchOpen(true)}
                 >
                   <Search size={20} />
@@ -423,12 +423,12 @@ const Navbar = () => {
                   </div>
                 </DialogContent>
               </Dialog>
-              <button className="text-anahata-gold hover:text-anahata-terracotta transition-colors">
+              <button className="text-black hover:text-anahata-terracotta transition-colors">
                 <User size={20} />
               </button>
               <Popover>
                 <PopoverTrigger asChild>
-                  <button className="relative text-anahata-gold hover:text-anahata-terracotta transition-colors">
+                  <button className="relative text-black hover:text-anahata-terracotta transition-colors">
                     <ShoppingCart size={20} />
                     <span className="absolute -top-2 -right-2 bg-anahata-terracotta text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
                       {cartItemCount}
